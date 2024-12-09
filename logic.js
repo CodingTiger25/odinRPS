@@ -18,4 +18,13 @@
     return decision
 }
 
-console.log(getComputerChoice());
+
+
+function getHumanChoice()
+{
+    let decision = prompt("Rock, Paper, or Scissors? ")
+
+    return decision.toLowerCase();
+}
+
+console.log(getHumanChoice())
