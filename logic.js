@@ -32,4 +32,52 @@ function getHumanChoice()
     return decision.toLowerCase();
 }
 
-console.log(getHumanChoice())
+
+
+function playRound(humanChoice, computerChoice) {
+    
+    switch(humanChoice)
+    {
+        case humanChoice === "rock" && computerChoice === "paper":
+            computerChoice += 1;
+            console.log("You lose! Paper beats rock!") 
+
+        case humanChoice === "rock" && computerChoice === "scissors":
+            humanChoice += 1;
+            console.log("You win! Rock beats paper!")
+        case humanChoice === "rock" && computerChoice === "rock":          
+             console.log("Both rock TIE!!!")
+
+
+             case humanChoice === "paper" && computerChoice === "rock":
+            humanChoice += 1;
+            console.log("You win! Paper beats rock!")
+
+            case humanChoice === "paper" && computerChoice === "paper":
+           
+            console.log("Tie!! Paper V Paper")
+
+            case humanChoice === "paper" && computerChoice === "scissors":
+            computerChoice += 1;
+            console.log("You lose!SCisscor beats paper!")
+
+            case humanChoice === "scissors" && computerChoice === "rock":
+            computerChoice += 1;
+            console.log("You lose! Rock beats scissors!")
+            
+            case humanChoice === "scissors" && computerChoice === "paper":
+            humanChoice += 1;
+            console.log("You win! Scissor beats paper!")
+
+            case humanChoice === "scissors" && computerChoice === "scissors":
+            
+            console.log("Tie Scissors V scissors")
+    }
+
+    
+
+}
+
+const humanSelect = getHumanChoice();
+    const cpuSelect = getComputerChoice();
+playRound(humanSelect, cpuSelect);
