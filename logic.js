@@ -2,13 +2,13 @@
  let computerScore = 0;
  
 
- const btn = document.querySelectorAll("button");
+ const btn = document.querySelectorAll('button');
 
 
  btn.forEach((button) => {
     button.addEventListener("click", () =>{
-        //console.log(button.id)
-        alert('HI')
+        console.log(button.id)
+        
 
     });
  });
