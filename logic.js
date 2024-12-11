@@ -27,14 +27,14 @@
 
 function getHumanChoice()
 {
-    let decision = prompt("Rock, Paper, or Scissors? ")
+    //let decision = prompt("Rock, Paper, or Scissors? ")
 
     return decision.toLowerCase();
 }
 
 
 
-function playRound(humanChoice, computerChoice) {
+/*function playRound(humanChoice, computerChoice) {
     
     switch(humanChoice)
     {
@@ -76,8 +76,8 @@ function playRound(humanChoice, computerChoice) {
 
     
 
-}
+}*/
 
 const humanSelect = getHumanChoice();
     const cpuSelect = getComputerChoice();
-playRound(humanSelect, cpuSelect);
+//playRound(humanSelect, cpuSelect);
