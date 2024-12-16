@@ -2,13 +2,13 @@
  let computerScore = 0;
  
 
- const btn = document.querySelectorAll('button');
-
+ let btn = document.querySelectorAll('button');
+ let cpuSelect = getComputerChoice();
 
  btn.forEach((button) => {
     button.addEventListener("click", () =>{
-        console.log(button.id)
-        
+        //console.log(button.id)
+        playRound(button.id, cpuSelect)
 
     });
  });
@@ -35,59 +35,68 @@
 
 
 
-function getHumanChoice()
+/*function getHumanChoice()
 {
     //let decision = prompt("Rock, Paper, or Scissors? ")
 
     return decision.toLowerCase();
-}
-
-
-
-/*function playRound(humanChoice, computerChoice) {
-    
-    switch(humanChoice)
-    {
-        case humanChoice === "rock" && computerChoice === "paper":
-            computerChoice += 1;
-            console.log("You lose! Paper beats rock!") 
-
-        case humanChoice === "rock" && computerChoice === "scissors":
-            humanChoice += 1;
-            console.log("You win! Rock beats paper!")
-        case humanChoice === "rock" && computerChoice === "rock":          
-             console.log("Both rock TIE!!!")
-
-
-             case humanChoice === "paper" && computerChoice === "rock":
-            humanChoice += 1;
-            console.log("You win! Paper beats rock!")
-
-            case humanChoice === "paper" && computerChoice === "paper":
-           
-            console.log("Tie!! Paper V Paper")
-
-            case humanChoice === "paper" && computerChoice === "scissors":
-            computerChoice += 1;
-            console.log("You lose!SCisscor beats paper!")
-
-            case humanChoice === "scissors" && computerChoice === "rock":
-            computerChoice += 1;
-            console.log("You lose! Rock beats scissors!")
-            
-            case humanChoice === "scissors" && computerChoice === "paper":
-            humanChoice += 1;
-            console.log("You win! Scissor beats paper!")
-
-            case humanChoice === "scissors" && computerChoice === "scissors":
-            
-            console.log("Tie Scissors V scissors")
-    }
-
-    
-
 }*/
 
-const humanSelect = getHumanChoice();
-    const cpuSelect = getComputerChoice();
+
+
+function playRound(humanChoice, computerChoice) {
+    
+        if(humanChoice === "rock" && computerChoice === "paper")
+        {
+             computerChoice += 1;
+             console.log("You lose! Paper beats rock!")
+        }
+
+        else if( humanChoice === "rock" && computerChoice === "scissors")
+        {
+            humanChoice += 1;
+            console.log("You win! Rock beats paper!")
+
+        }
+        else if(humanChoice === "rock" && computerChoice === "rock")
+        {
+            console.log("Both rock TIE!!!")
+        }
+
+        else if( humanChoice === "paper" && computerChoice === "rock")
+        {
+            humanChoice += 1;
+            console.log("You win! Paper beats rock!")
+        }
+
+        else if(humanChoice === "paper" && computerChoice === "paper")
+        {
+            console.log("Tie!! Paper V Paper")
+        }
+
+        else if( humanChoice === "paper" && computerChoice === "scissors")
+        {
+            computerChoice += 1;
+            console.log("You lose!SCisscor beats paper!")
+        }
+      
+        else if(humanChoice === "scissors" && computerChoice === "rock")
+        {
+            computerChoice += 1;
+            console.log("You lose! Rock beats scissors!")
+        }
+
+        else if(humanChoice === "scissors" && computerChoice === "paper")
+        {
+            humanChoice += 1;
+            console.log("You win! Scissor beats paper!")
+        }
+        else if( humanChoice === "scissors" && computerChoice === "scissors")
+        {
+            console.log("Tie Scissors V scissors")
+        }           
+}
+
+//const humanSelect = getHumanChoice();
+    
 //playRound(humanSelect, cpuSelect);
