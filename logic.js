@@ -7,8 +7,8 @@
 
  btn.forEach((button) => {
     button.addEventListener("click", () =>{
-        //console.log(button.id)
-        playRound(button.id, cpuSelect)
+        console.log(button.id)
+        playRound(button.id, getComputerChoice())
 
     });
  });
@@ -55,7 +55,7 @@ function playRound(humanChoice, computerChoice) {
         else if( humanChoice === "rock" && computerChoice === "scissors")
         {
             humanChoice += 1;
-            console.log("You win! Rock beats paper!")
+            console.log("You win! Rock beats scissors!")
 
         }
         else if(humanChoice === "rock" && computerChoice === "rock")
